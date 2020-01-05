@@ -28,13 +28,7 @@ public class SurveyApi {
 @Autowired
 private SurveyService surveyService;	
 
-
-
-
-
 static int surveyIdToBeAdded = 1;
-
-
 	
 @PostMapping(value = "/createsurvey")	
 public ResponseEntity<String> createSurvey(@RequestBody ArrayList<String> Questions) throws Exception  {
@@ -74,10 +68,7 @@ public ResponseEntity<String> takeASurvey(@RequestBody String body){
 		 survey = surveyService.takeASurvey(surveyId,questions,answers);
 		System.out.println("Your Response stored Successfully");
 	
-		for(int i=0;i<survey.getSur().size();i++) {
-		//	System.out.println("HII");
-			System.out.println(survey.getSur().get(i).getYes());
-		}
+		
 		
 	}
 	catch(Exception e) {

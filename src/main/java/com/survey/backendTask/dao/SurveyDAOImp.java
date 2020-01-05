@@ -80,15 +80,12 @@ public class SurveyDAOImp implements SurveyDAO {
 				for(Question q : survey.getSur()) {
 			
 			if(q.getQuestion().equals(questions.getString(i).toString())) {		
-					System.out.println("question  found");
 					
 				if(answers.get(i).toString().equals("no")) {
-					System.out.println("its a no");
 					q.setNo(q.getNo()+1);
 				}
 				
 				else if(answers.get(i).toString().equals("yes")) {
-					System.out.println("its a yes");
 					q.setYes(q.getYes()+1);
 				}
 			}
